@@ -1,75 +1,148 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# LexDigital SN
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**Système d'Analyse des Risques Juridiques des Plateformes Numériques au Sénégal**
 
-## About Laravel
+Projet académique — ESITEC L3 Génie Logiciel · Groupe Supdeco Dakar · 2026
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Présentation
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+LexDigital SN est une application web qui permet aux opérateurs de plateformes numériques au Sénégal d'évaluer leurs risques juridiques et d'obtenir des recommandations de mise en conformité, sans nécessiter de connaissances juridiques préalables.
 
-## Learning Laravel
+L'outil couvre **9 domaines juridiques** fondés sur le cadre légal sénégalais en vigueur :
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+| Domaine | Textes de référence |
+|---|---|
+| Protection des données personnelles | Loi n°2008-12, Décret 2008-721 |
+| Contrats électroniques et CGU | Loi n°2008-08 |
+| Paiement électronique et monnaie mobile | Instructions BCEAO 008/2002, 03/2012, 01/2018 |
+| Cybersécurité et incidents | Loi n°2008-11 / Code pénal art. 431-10 à 431-40 |
+| Contenu illicite et modération | Loi n°2008-11, Loi n°2017-27 (Code de la presse) |
+| Protection des consommateurs | Loi n°83-01, COCC art. 92-99 |
+| Propriété intellectuelle | Loi n°2008-09, Accord de Bangui / OAPI |
+| Fiscalité du numérique | CGI Sénégal, Directive UEMOA 02/2011 |
+| Protection des mineurs en ligne | Code pénal art. 431-35 à 431-40, CIDE |
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Fonctionnalités
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- Formulaire guidé : type de plateforme, domaine juridique, contexte géographique, aspects techniques
+- Moteur d'analyse par matrice de règles métier (sans IA externe)
+- Rapport personnalisé : niveau de risque, textes applicables, recommandations, sanctions, autorité compétente
+- Export PDF du rapport
+- Authentification avec espace personnel (historique des analyses par utilisateur)
+- Dashboard avec statistiques et filtres par niveau de risque
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Stack technique
 
-### Premium Partners
+- **Backend** : Laravel 9 / PHP 8
+- **Base de données** : MySQL
+- **Authentification** : Laravel Breeze
+- **PDF** : barryvdh/laravel-dompdf
+- **Frontend** : Blade, CSS personnalisé (IBM Plex Sans, IBM Plex Mono, Playfair Display)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+---
 
-## Contributing
+## Installation
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Prérequis
 
-## Code of Conduct
+- PHP >= 8.0
+- Composer
+- MySQL
+- Node.js (optionnel)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Étapes
 
-## Security Vulnerabilities
+**1. Cloner le dépôt**
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+git clone https://github.com/NMLOUM/lexdigital-sn.git
+cd lexdigital-sn
+```
 
-## License
+**2. Installer les dépendances PHP**
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+composer install
+```
 
+**3. Configurer l'environnement**
 
+```bash
+cp .env.example .env
+php artisan key:generate
+```
 
-Un client a effectué un paiement mais n'a pas reçu son produit
-La plateforme a subi un piratage
-Nous avons détecté une fraude sur plusieurs transactions
-Les données personnelles des utilisateurs ont été exposées
-Un utilisateur a publié un contenu diffamatoire
-Une commande n'a jamais été livrée
+Ouvrez `.env` et configurez votre base de données :
+
+```env
+DB_DATABASE=legalrisk
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+**4. Créer la base de données et exécuter les migrations**
+
+```bash
+php artisan migrate
+```
+
+**5. Lancer le serveur de développement**
+
+```bash
+php artisan serve
+```
+
+L'application est accessible sur **http://127.0.0.1:8000**
+
+---
+
+## Utilisation
+
+1. Créer un compte via `/register`
+2. Se connecter via `/login`
+3. Remplir le formulaire d'analyse (type de plateforme, domaine juridique, situation)
+4. Consulter le rapport généré
+5. Télécharger le rapport en PDF si nécessaire
+6. Retrouver toutes ses analyses dans le Dashboard
+
+---
+
+## Structure du projet
+
+```
+app/
+├── Http/
+│   ├── Controllers/
+│   │   └── AnalyseController.php   # Moteur d'analyse + CRUD
+│   └── Requests/
+│       └── AnalyseRequest.php      # Validation du formulaire
+└── Models/
+    └── Analyse.php                 # Modèle avec cast JSON pour aspects[]
+
+resources/views/
+├── layouts/app.blade.php           # Layout principal
+├── analyse.blade.php               # Formulaire d'analyse
+├── resultat.blade.php              # Rapport de résultat
+├── dashboard.blade.php             # Historique utilisateur
+├── auth/                           # Login / Register
+└── pdf/rapport.blade.php           # Template export PDF
+
+database/migrations/                # Migrations SQL
+routes/web.php                      # Routes (toutes protégées par auth)
+```
+
+---
+
+## Avertissement légal
+
+Les analyses produites par cet outil sont fournies à titre informatif dans un cadre académique. Elles ne constituent pas un avis juridique professionnel et ne sauraient engager la responsabilité de leurs auteurs. Consultez un avocat qualifié pour toute décision engageant votre responsabilité juridique.
+
+---
+
+## Auteurs
+
+Projet réalisé dans le cadre de l'examen de L3 Génie Logiciel — ESITEC · Groupe Supdeco Dakar · 2026
