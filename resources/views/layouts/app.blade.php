@@ -10,7 +10,7 @@
 
     <style>
     :root {
-        --ink:       #0D1117;
+        --ink:       #2D3748;
         --ink-2:     #2D3748;
         --ink-muted: #718096;
         --paper:     #F7F5F0;
