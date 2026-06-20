@@ -38,6 +38,11 @@ class AnalyseController extends Controller
         'international' => 'International (hors CEDEAO)',
     ];
 
+    public function landing()
+    {
+        return view('welcome');
+    }
+
     public function index()
     {
         return view('analyse');

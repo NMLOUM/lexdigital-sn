@@ -443,7 +443,7 @@
 <body>
 
 <header>
-    <a href="{{ auth()->check() ? route('home') : route('login') }}" class="logo">
+    <a href="{{ route('landing') }}" class="logo">
         Lex<em>Digital</em> SN<sup>beta</sup>
     </a>
     <nav class="header-nav">

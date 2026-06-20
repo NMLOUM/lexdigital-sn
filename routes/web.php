@@ -3,10 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AnalyseController;
 
-// Accueil et analyse — accessibles même sans connexion (redirige vers login si protection voulue)
+// Page d'accueil publique
+Route::get('/', [AnalyseController::class, 'landing'])->name('landing');
+
+// Routes protégées
 Route::middleware('auth')->group(function () {
 
-    Route::get('/', [AnalyseController::class, 'index'])->name('home');
+    Route::get('/nouvelle-analyse', [AnalyseController::class, 'index'])->name('home');
 
     Route::post('/analyse', [AnalyseController::class, 'analyser'])->name('analyse');
 
